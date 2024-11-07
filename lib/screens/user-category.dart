@@ -4,6 +4,7 @@ import 'package:waterdelivery/constants/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:waterdelivery/components/Text-style.dart';
 import 'package:waterdelivery/screens/homeScreen.dart';
+import 'package:waterdelivery/components/custom-button.dart';
 
 class UsrCateogory extends StatelessWidget {
   const UsrCateogory({super.key});
@@ -70,28 +71,17 @@ class UsrCateogory extends StatelessWidget {
             SizedBox(
               height: 20.h,
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
-              },
-              child: Container(
-                width: 300,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: AppColors.appColor,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Text('Next',
-                      style: TextStyle(
-                        color: AppColors.whiteColor,
-                        fontSize: 30,
-                      )),
-                ),
-              ),
-            ),
 
-        
+// Button to Navigate to nextPage
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
+                child: CustomButton(
+                  text: 'Next ',
+                  onPressed: () {},
+                )),
           ],
         ),
       ),
