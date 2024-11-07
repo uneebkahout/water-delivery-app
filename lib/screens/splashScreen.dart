@@ -36,33 +36,28 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child:
-        
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,  
-                  children: [
-                    Image.asset(imgAssets.appLogo),
-                     SpinKitThreeInOut(
-                itemBuilder: (_, int index) {
-                  return DecoratedBox(
-                    decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.circular(20),
-                        color: index.isEven
-                            ? const Color.fromARGB(255, 235, 244, 54)
-                            : Color.fromARGB(255, 0, 108, 172)),
-                  );
-                },
-              ),
-               
-                  ],
-                ),
-              )
-         
-         ),
-      
+          child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(imgAssets.appLogo),
+
+            // SpinKit Function
+            SpinKitThreeInOut(
+              itemBuilder: (_, int index) {
+                return DecoratedBox(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(20),
+                      color: index.isEven
+                          ? const Color.fromARGB(255, 235, 244, 54)
+                          : Color.fromARGB(255, 0, 108, 172)),
+                );
+              },
+            ),
+          ],
+        ),
+      )),
     );
   }
 }
-  
