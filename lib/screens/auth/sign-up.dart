@@ -5,6 +5,7 @@ import 'package:waterdelivery/constants/colors.dart';
 import 'package:waterdelivery/components/Text-style.dart';
 import 'package:waterdelivery/components/text-field.dart';
 import 'package:waterdelivery/components/custom-button.dart';
+import 'package:waterdelivery/screens/auth/sign-in.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -76,7 +77,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 10.h,
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignInScreen()));
+                  },
                   child: textStyle(
                     text: 'Already have an account? Sign In',
                     fontSize: 10.sp,

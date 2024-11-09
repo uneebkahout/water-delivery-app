@@ -26,8 +26,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           pageBackgroundColor: AppColors.whiteColor,
 
           centerBackground: true,
-
-// Background Images
           background: [
             Image.asset(
               imgAssets.onboardingtruck,
@@ -43,7 +41,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ],
           speed: 2,
-//Page Bodies
           pageBodies: [
             Container(
               alignment: Alignment.center,
@@ -112,7 +109,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ],
 
-//finish button
+          //finish button
           finishButtonText: 'GetStarted',
           onFinish: () {
             Navigator.push(context,
